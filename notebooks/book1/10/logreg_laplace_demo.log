@@ -1,0 +1,47 @@
+An error occurred while executing the following cell:
+------------------
+# Author: Meduri Venkata Shivaditya
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+%matplotlib inline
+from scipy.stats import norm, multivariate_normal
+
+try:
+    import bayes_logistic  # pip install -qq bayes_logistic
+except ModuleNotFoundError:
+    %pip install -qq bayes_logistic
+    import bayes_logistic  # pip install -qq bayes_logistic
+import warnings
+
+try:
+    import probml_utils as pml
+except ModuleNotFoundError:
+    %pip install -qq git+https://github.com/probml/probml-utils.git
+    import probml_utils as pml
+
+warnings.filterwarnings("ignore", category=RuntimeWarning)
+------------------
+
+---------------------------------------------------------------------------
+ModuleNotFoundError                       Traceback (most recent call last)
+/tmp/ipykernel_3728/3789891112.py in <module>
+     16 try:
+---> 17     import probml_utils as pml
+     18 except ModuleNotFoundError:
+
+ModuleNotFoundError: No module named 'probml_utils'
+
+During handling of the above exception, another exception occurred:
+
+ModuleNotFoundError                       Traceback (most recent call last)
+/tmp/ipykernel_3728/3789891112.py in <module>
+     18 except ModuleNotFoundError:
+     19     get_ipython().run_line_magic('pip', 'install -qq git+https://github.com/probml/probml-utils.git')
+---> 20     import probml_utils as pml
+     21 
+     22 warnings.filterwarnings("ignore", category=RuntimeWarning)
+
+ModuleNotFoundError: No module named 'probml_utils'
+ModuleNotFoundError: No module named 'probml_utils'
